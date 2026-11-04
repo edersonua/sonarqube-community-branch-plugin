@@ -9,7 +9,7 @@ WORKDIR ${WORKDIR}
 RUN gradle build -x test
 
 
-FROM node:22.16-alpine AS webapp-builder
+FROM node:24.22.2-alpine AS webapp-builder
 # Corrigido: Definido o caminho explicitamente para evitar que o Podman perca a variável
 WORKDIR /app
 COPY ./sonarqube-webapp /app
